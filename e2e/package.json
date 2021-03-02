@@ -1,0 +1,29 @@
+{
+  "name": "sinfo-cats-e2e",
+  "version": "0.0.1",
+  "description": "End to End tests for Sinfo Cats application",
+  "main": "specs/index.spec.js",
+  "scripts": {
+    "lint": "eslint specs/* --ext js --fix",
+    "pretest": "npm run lint",
+    "test": "cypress run --browser chrome",
+    "open": "cypress open"
+  },
+  "keywords": [
+    "e2e",
+    "cypress",
+    "testing-library"
+  ],
+  "author": "William R. J. Ribeiro, Rita Castro",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.4",
+    "cypress": "^6.6.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-cypress": "^2.11.2"
+  },
+  "engines": {
+    "node": "14",
+    "npm": "6"
+  }
+}
