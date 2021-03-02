@@ -14,7 +14,6 @@ public class GetRootHandler implements Handler {
     public void handle(@NotNull Context ctx) {
         // create new Page with parsed query parameters
         RootPage rootPage = new RootPage(
-            GetRootHandler.parseCatIdParam(ctx),
             GetRootHandler.parseCatVariation(ctx)
         );
 
@@ -22,11 +21,7 @@ public class GetRootHandler implements Handler {
         ctx.render("index.jte", Collections.singletonMap("page", rootPage));
     }
 
-    private static int parseCatIdParam(@NotNull Context ctx) {
-        return Integer.parseInt(Objects.requireNonNull(ctx.queryParam("cat-id", "0")));
-    }
-
     private static boolean parseCatVariation(@NotNull Context ctx) {
-        return Objects.equals(ctx.queryParam("cat-variation", "off"), "on");
+        return Objects.equals(ctx.queryParam("cat-variation", "light"), "dark");
     }
 }

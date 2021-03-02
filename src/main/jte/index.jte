@@ -3,12 +3,16 @@
 @layout.base(content = @`
     <h1>Hello SINFO 28</h1>
     <form method="get">
-        <button type="submit">${page.catName}</button>
+        <button type="submit">Apply</button>
         <label>
-            <input type="checkbox" name="cat-variation" checked="${page.isDark}">
-            dark
+            <input type="radio" name="cat-variation" value="light" checked="${!page.isDark}">
+            Light
         </label>
+        <label>
+            <input type="radio" name="cat-variation" value="dark" checked="${page.isDark}">
+            Dark
+        </label>
+        <p><b>${page.catName}</b></p>
         <p><a href="${page.catImgPath}"><i>${page.catImgPath}</i></a></p>
-        <input type="hidden" name="cat-id" value="${page.catId}">
     </form>
 `)

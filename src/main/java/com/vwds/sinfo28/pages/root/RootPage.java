@@ -3,11 +3,9 @@ package com.vwds.sinfo28.pages.root;
 public class RootPage {
     public final String catImgPath;
     public final String catName;
-    public final int catId;
     public final boolean isDark;
 
-    public RootPage(int previousCatId, boolean isDark) {
-        this.catId = RootPage.getCatId(previousCatId);
+    public RootPage(boolean isDark) {
         this.isDark = isDark;
         // TIP: first implement inline so we can refactor
         this.catName = this.getCatName();
@@ -15,14 +13,10 @@ public class RootPage {
     }
 
     private String getImgPath() {
-        return String.format("assets/cats/%scat-%s.jpg", isDark ? "dark-" : "", catId);
+        return isDark ? "assets/cats/dark-cat.jpg" : "assets/cats/light-cat.jpg";
     }
 
     private String getCatName() {
-        return String.format("Cat Name %s", catId);
-    }
-
-    private static int getCatId(int catId) {
-        return catId + 1; // TODO: limit number of catIds
+        return isDark ? "Hacky Grey" : "Sandy Hacky";
     }
 }
