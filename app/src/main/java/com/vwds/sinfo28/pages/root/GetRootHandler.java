@@ -21,7 +21,7 @@ public class GetRootHandler implements Handler {
         ctx.render("index.jte", Collections.singletonMap("page", rootPage));
     }
 
-    private static boolean parseCatVariation(@NotNull Context ctx) {
-        return Objects.equals(ctx.queryParam("cat-variation", "light"), "dark");
+    private static String parseCatVariation(@NotNull Context ctx) {
+        return ctx.queryParam("cat-variation", "light");
     }
 }

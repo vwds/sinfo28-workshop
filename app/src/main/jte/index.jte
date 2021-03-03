@@ -6,7 +6,7 @@
         <img src="${page.catImgPath}" alt="${page.catName} SINFO CAT" height="350">
         <form method="get">
             <label>
-                <input type="radio" name="cat-variation" value="light" checked="${!page.isDark}">
+                <input type="radio" name="cat-variation" checked="${!page.isDark}">
                 Light
             </label>
             <label>

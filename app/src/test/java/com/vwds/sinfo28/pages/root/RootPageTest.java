@@ -12,14 +12,14 @@ class RootPageTest {
 
         @Test
         void testCatName() {
-            RootPage page = new RootPage(false);
+            RootPage page = new RootPage("light");
 
             assertEquals("Sandy Hacky", page.catName);
         }
 
         @Test
         void testCatImagePath() {
-            RootPage page = new RootPage(false);
+            RootPage page = new RootPage("light");
 
             assertEquals("assets/sandy-hacky.jpg", page.catImgPath);
         }
@@ -30,14 +30,14 @@ class RootPageTest {
 
         @Test
         void testCatName() {
-            RootPage page = new RootPage(true);
+            RootPage page = new RootPage("dark");
 
             assertEquals("Grey Hacky", page.catName);
         }
 
         @Test
         void testCatImagePath() {
-            RootPage page = new RootPage(true);
+            RootPage page = new RootPage("dark");
 
             assertEquals("assets/grey-hacky.jpg", page.catImgPath);
         }

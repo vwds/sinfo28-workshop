@@ -7,8 +7,8 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <title>SINFO 28 - SDC Workshop</title>
-    <meta name="description" content="Workshop about SDC work methodology">
+    <title>SINFO 28 - SDC:LX Workshop</title>
+    <meta name="description" content="Workshop about SDC:LX work methodology">
     <meta name="author" content="Rita Castro - rita@vw-dilab.com">
     <meta name="author" content="William R. J. Ribeiro - william@vw-dilab.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">

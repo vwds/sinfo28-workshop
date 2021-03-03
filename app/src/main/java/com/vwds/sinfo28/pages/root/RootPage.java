@@ -5,8 +5,8 @@ public class RootPage {
     public final String catName;
     public final boolean isDark;
 
-    public RootPage(boolean isDark) {
-        this.isDark = isDark;
+    public RootPage(String variation) {
+        this.isDark = variation.toLowerCase().equals("dark");
         // TIP: first implement inline so we can refactor
         this.catName = this.getCatName();
         this.catImgPath = this.getImgPath();
