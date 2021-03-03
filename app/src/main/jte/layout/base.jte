@@ -12,11 +12,11 @@
     <meta name="author" content="Rita Castro - rita@vw-dilab.com">
     <meta name="author" content="William R. J. Ribeiro - william@vw-dilab.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="">
 </head>
 <body>
-<main>
+<main class="sinfo-28">
     ${content}
 </main>
 <!-- SCRIPTS -->

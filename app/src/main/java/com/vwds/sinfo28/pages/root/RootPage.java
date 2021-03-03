@@ -13,10 +13,10 @@ public class RootPage {
     }
 
     private String getImgPath() {
-        return isDark ? "assets/cats/dark-cat.jpg" : "assets/cats/light-cat.jpg";
+        return isDark ? "assets/grey-hacky.jpg" : "assets/sandy-hacky.jpg";
     }
 
     private String getCatName() {
-        return isDark ? "Hacky Grey" : "Sandy Hacky";
+        return isDark ? "Grey Hacky" : "Sandy Hacky";
     }
 }

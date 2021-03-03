@@ -1,0 +1,13 @@
+.sinfo-28 form label {
+    display: block;
+    line-height: 2em;
+}
+
+.sinfo-28 .media-object {
+    display: flex;
+    align-items: center;
+}
+
+.sinfo-28 form {
+    margin-left: 3em;
+}
