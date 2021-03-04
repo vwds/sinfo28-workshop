@@ -16,9 +16,11 @@ describe('SINFO =^__^=', () => {
         describe("when website finishes loading", () => {
             // THEN
             it("shows Sandy Hacky on the screen", () => {
-                verifyCat('Sandy Hacky')
+                cy.findByRole('img')
+                    .should('have.attr', 'src', 'assets/sandy-hacky.jpg')
+                    .and('have.attr', 'alt', 'Sandy Hacky SINFO CAT')
             })
-            
+
             it("shows its name", () => {
                 cy.findByText(/hi, i am Sandy Hacky/i)
             })
@@ -39,7 +41,9 @@ describe('SINFO =^__^=', () => {
             cy.visit('/')
 
             // AND
-            verifyCat('Sandy Hacky')
+            cy.findByRole('img')
+                .should('have.attr', 'src', 'assets/sandy-hacky.jpg')
+                .and('have.attr', 'alt', 'Sandy Hacky SINFO CAT')
         })
 
         it("shows the unselected DARK option", () => {
@@ -59,10 +63,12 @@ describe('SINFO =^__^=', () => {
 
                 cy.findByRole('button', { name: 'Apply' }).click()
             })
-            
+
             // THEN
             it("shows Grey Hacky on the screen", () => {
-                verifyCat('Grey Hacky')
+                cy.findByRole('img')
+                    .should('have.attr', 'src', 'assets/grey-hacky.jpg')
+                    .and('have.attr', 'alt', 'Grey Hacky SINFO CAT')
             })
 
             it("shows its name", () => {
@@ -79,49 +85,6 @@ describe('SINFO =^__^=', () => {
     // THEN   I see Sandy Hacky on the screen
     // AND    its __name__
     describe("Hacky switches between shirts", () => {
-
-        // GIVEN
-        before(() => {
-            cy.visit('/?cat-variation=dark')
-
-            // AND
-            verifyCat('Grey Hacky')
-        })
-
-        it("shows the unselected LIGHT option", () => {
-            cy.findByRole('radio', { name: 'Light' })
-                .should('not.be.checked')
-        })
-
-        it("shows the Apply button", () => {
-            cy.findByRole('button', { name: 'Apply' }).should('have.attr', 'type', 'submit')
-        })
-
-        describe("when user selects the LIGHT option and clicks in the Apply button", () => {
-
-            // WHEN
-            before(() => {
-                cy.findByRole('radio', { name: 'Light' }).click()
-
-                cy.findByRole('button', { name: 'Apply' }).click()
-            })
-            
-            // THEN
-            it("shows Sandy Hacky on the screen", () => {
-                verifyCat('Sandy Hacky')
-            })
-
-            it("shows its name", () => {
-                cy.findByText(/hi, i am Sandy Hacky/i)
-            })
-        })
+        
     })
-
-    const verifyCat = (catName) => {
-        const fileName = catName.toLocaleLowerCase().split(' ').join('-')
-
-        cy.findByRole('img')
-            .should('have.attr', 'src', `assets/${fileName}.jpg`)
-            .and('have.attr', 'alt', `${catName} SINFO CAT`)
-    }
 })

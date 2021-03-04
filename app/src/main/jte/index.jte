@@ -13,7 +13,7 @@
                 Dark
             </label>
             <button type="submit">Apply</button>
-            <p>Hi, I am <b>${page.catName}</b></p>
+            <p>Hi, I am ${page.catName}</p>
         </form>
     </div>
 `)
