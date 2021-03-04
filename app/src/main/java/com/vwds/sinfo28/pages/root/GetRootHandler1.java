@@ -9,9 +9,7 @@ public class GetRootHandler1 implements Handler {
 
     @Override
     public void handle(@NotNull Context ctx) {
-        // render template with Page data
         ctx.render("index0.jte");
-
 
 
         // ctx.render("index1.jte");

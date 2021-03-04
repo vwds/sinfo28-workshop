@@ -16,10 +16,6 @@ public class GetRootHandler2 implements Handler {
             GetRootHandler2.parseCatVariation(ctx)
         );
 
-        // render template with Page data
-        //ctx.render("index.jte", Collections.singletonMap("page", rootPage));
-
-
         ctx.render("index2.jte", Collections.singletonMap("page", rootPage));
     }
 
