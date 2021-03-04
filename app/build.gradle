@@ -1,8 +1,19 @@
 plugins {
     id 'java'
+    id "application"
 }
 
-group 'org.example'
+apply plugin : "java"
+
+ext {
+   javaMainClass = "com.vwds.sinfo28.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+group 'com.vwds.sinfo28'
 version '1.0-SNAPSHOT'
 
 repositories {
