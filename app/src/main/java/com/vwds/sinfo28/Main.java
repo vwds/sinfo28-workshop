@@ -12,5 +12,9 @@ public class Main {
         ).start(7000);
 
         app.get(GetRootHandler.path, new GetRootHandler());
+
+
+//        app.get(GetRootHandler1.path, new GetRootHandler1());
+//        app.get(GetRootHandler2.path, new GetRootHandler2());
     }
 }

@@ -1,13 +1,14 @@
 package com.vwds.sinfo28.pages.root;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RootPage {
     public final String catImgPath;
     public final String catName;
     public final boolean isDark;
 
-    public RootPage(String variation) {
-        this.isDark = variation.toLowerCase().equals("dark");
-        // TIP: first implement inline so we can refactor
+    public RootPage(@NotNull String variation) {
+        this.isDark = variation.equalsIgnoreCase("dark");
         this.catName = this.getCatName();
         this.catImgPath = this.getImgPath();
     }
